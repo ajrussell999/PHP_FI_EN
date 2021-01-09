@@ -23,9 +23,23 @@
     font-family:'roboto', sans-serif;
     text-emphasis: none;
     font-weight: normal;
-    z-index: 1;
+    flex-grow: 1;
     }
-
+    .posts{
+        grid-template-columns: 1/-1;
+        grid-template-rows: 3;
+        grid-template-columns: repeat(auto-fit, minmax(480,1fr));
+        box-sizing: border-box;
+        padding: 10px;
+        width: 500px;
+        max-width: 550px;  
+        height: auto;
+        max-height:560px; /* sum of pic, text, tags */
+        display: inline-block;
+        background-color: var(--powder_blue);
+        vertical-align: top;
+    
+        }
 .menu{
         grid-column: 1/-1;
     }
@@ -125,20 +139,20 @@ h3{
     text-align: center;
 }
 .header{
-    /*grid-template-columns: (auto-fit (480,1fr)); /* required for mobile to render header classic blue background in full screen width*/
-    grid-template-columns: 6;
+text-align: center;
 
-
-    text-align: center;
-    height: auto;
-    width: 100vw;
-    max-width: 100vw; 
-    display: inline-block;
-    box-sizing: border-box;
-    background-color: var(--classic_blue);
-    z-index: 10;
 }
-
+.hblock{
+    box-sizing: border-box;
+    display: block;
+    min-width: 480px;
+    text-align: center;
+    width:auto; 
+    margin-bottom: auto;
+    height: auto;
+    flex-grow: 1;
+    background-color: var(--classic_blue);
+}
 .headline{
     color:var(--white);
     font-family:'Robotoslab', sans-serif;
@@ -146,7 +160,6 @@ h3{
     font-size:4vw;
     text-align: left;
     margin-left: 30pw;
-    background-color: var(--classic_blue);
 }
 .headlinetwo{
     color:var(--white);
@@ -154,7 +167,6 @@ h3{
     font-weight: 400;
     font-size:4vw;
     text-align: center;
-    background-color: var(--classic_blue);
        }
 .headline_low{
     color:var(--white);
@@ -162,44 +174,26 @@ h3{
     font-weight: 400;
     font-size:3vw;
     text-align:center;
-    background-color: var(--classic_blue);
 }
 
 .TTspace{
-    display:inline-block;
-    width: 100vw;
-    height: 22vh; /* space between navbar and dynamic titles rectangle*/
-    background-color: var(--classic_blue);
+    display:block;
+    width: 50vw;
+    height: 22vh;
+    background-color: transparent;
 }
 .rectangle {
     display: inline-block;
-    border: 2vw solid white; /*white rectangle header feature on landing page */
+    border: 2vw solid white;
     text-align: center;
     text-size-adjust: auto;
     font-size: 3vw;
     padding: 3vw;
     width: 50vw;
-    height: 31vw;/*white rectangle maintain width to hight golden ratio */
+    height: 31vw;
     border-radius: 7px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: var(--classic_blue);
+    background-color: transparent;
 }
-.posts{
-        max-width: 100vw; /*tile width of browser with 500px wide posts -inlineblock  */
-        grid-template-columns: 1/-1;
-        grid-template-rows: 3;
-        grid-template-columns: repeat(auto-fit, minmax(480,1fr));
-        box-sizing: border-box;
-        padding: 10px;
-        width: 500px;
-        max-width: 550px;  
-        height: auto;
-        max-height:560px; /* sum of pic, text, tags */
-        display: inline-block;
-        background-color: var(--powder_blue);
-        vertical-align: top;
-    }
 
     [class^="tile"] {
     box-sizing: border-box;

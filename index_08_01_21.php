@@ -73,7 +73,7 @@ session_start();
                     <h1 class="headline"><strong><?php echo $lang['head1a'] ?> <br><?php echo $lang['head1b'] ?><br><br><br><br></strong></h1> 
                     <h1 class="headlinetwo"><strong><?php echo $lang['head2'] ?></strong></h1>
                     </div><!-- close div rectanagle for front page-->
-                    
+
                     <h3 class="headline_low"><br><?php echo $lang['headlowa'] ?> <br> <?php echo $lang['headlowb'] ?> <br></h3><br>
                 </div> <!-- close div TTspace for front page titles -->
             </div> <!-- close div hblock -->

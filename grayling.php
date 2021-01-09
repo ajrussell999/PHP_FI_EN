@@ -61,29 +61,25 @@ session_start();
         <div class="navbar"></div><a href="./subscribe.php"><?php echo $lang['subscribe'] ?></a></div>
     </div>
 
+        <div class="headline_low">
+            <h2><?php echo $lang['Hari_headline'] ?> </h2>
+        </div>
 
-    <div class="backfill">
-        <div class="header">
-        <div class="hblock">
-        <h2><?php echo $lang['Hari_headline'] ?> </h2>
-        </div></div>
-
-        <div class="text_grayling"><?php echo$lang['ftfs_grayling'] ?><br><br>
+        <div class="text_grayling">
+            <?php echo$lang['ftfs_grayling'] ?><br><br>
         </div>
 
         <div class="tile_1">
-        <a href="./vl_adams_irresistible.php" target="_self"><?php echo $lang['more'] ?></a>
+            <a href="./vl_adams_irresistible.php" target="_self"><?php echo $lang['more'] ?></a>
         </div>
     
         <div class="tile_2">
-        <a href="./vl_cdc_olive_dun.php" target="_self"><?php echo $lang['more'] ?></a>
+            <a href="./vl_cdc_olive_dun.php" target="_self"><?php echo $lang['more'] ?></a>
         </div>
     
         <div class="tile_3">
-        <a href="./vl_peeping_caddis.php" target="_self"><?php echo $lang['more'] ?></a>
+            <a href="./vl_peeping_caddis.php" target="_self"><?php echo $lang['more'] ?></a>
         </div>
-    </div><!-- close div backfill -->
-
-</div>
+</div><!-- close div vlog -->
 </body>
 </html>

@@ -31,7 +31,6 @@ session_start();
 
 <body>
 <div class="vlog">
-
     <div class="menu">
         <div class="navbar">
             <a href="index.php?lang=en" target="_self">
@@ -61,26 +60,25 @@ session_start();
                     </div>
                 </div> <!-- close div subnav -->
 
-        <div class="navbar"> 
-        </div>
             <div class="subnav"><a href="./subscribe.php"><?php echo $lang['subscribe'] ?></a>
             </div> <!-- close div subnav -->
-    
-     <div class="header">
-         <div class="hblock">
-                <div class="TTspace"></div>
-                    <div class="rectangle">
-                    <h1 class="headline"><strong><?php echo $lang['head1a'] ?> <br><?php echo $lang['head1b'] ?><br><br><br><br></strong></h1> 
-                    <h1 class="headlinetwo"><strong><?php echo $lang['head2'] ?></strong></h1>
-                    </div><!-- close div rectanagle for front page-->
-                    
-                    <h3 class="headline_low"><br><?php echo $lang['headlowa'] ?> <br> <?php echo $lang['headlowb'] ?> <br></h3><br>
-                </div> <!-- close div TTspace for front page titles -->
-            </div> <!-- close div hblock -->
-        </div>  <!-- close div header -->
+        </div><!-- close div navbar -->
     </div>  <!-- close div menu -->
+    
+        <div class="header">
+            <div class="head_i1">
+            </div> <!-- close div T_Top for space between navbar and rectangle -->
+            <div class="head_i2"></div> <!-- left margin-->
+                <div class="head_i3">
+                    <h1 class="headline"><strong><?php echo $lang['head1a'] ?> <br><?php echo $lang['head1b'] ?><br><br></strong></h1> 
+                    <h1 class="headlinetwo"><strong><?php echo $lang['head2'] ?></strong></h1>
+                </div><!-- close div Rectangle white autosizing dynamic on front page-->
+            <div class="head_i4"></div> <!-- close div right margin-->
+            <div class="head_i5">
+                    <h3 class="headline_low"><br><?php echo $lang['headlowa'] ?> <br> <?php echo $lang['headlowb'] ?> <br></h3><br>
+            </div><!-- close div T_Low for lower titles, tying tutorials...-->
+        </div>  <!-- close div grid-container -->
 <!--  div vlog remains open, acts as backdrop container -->
-
 
     <div class="posts">
         <div class="tile_1">

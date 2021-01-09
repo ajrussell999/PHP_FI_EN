@@ -63,15 +63,12 @@ session_start();
         <div class="navbar"></div><a href="./subscribe.php"><?php echo $lang['subscribe'] ?></a></div>
     </div>
 
-    <div class="backfill">
-        <div class="header">
-        <div class="hblock">
-        <h2><?php echo $lang['abouthead'] ?> </h2>
-        </div>
+        <div class="headline_low">
+            <h2><?php echo $lang['abouthead'] ?> </h2>
         </div>
         <div class="about"><?php echo $lang['website'] ?>
         </div>
-    </div> <!-- close backfill-->
+
 </div><!-- close vlog -->
 </body>
 </html>

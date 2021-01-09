@@ -38,7 +38,7 @@ session_start();
          <!-- <a href="index.php?lang=fi"><?php echo $lang['lang_fi'] ?></a> -->
             <a href="./Barry.php?lang=fi"  target="_self">
             <img border="2" alt="FI_flag" src="./images/FIflag.png"><?php echo $lang['lang_fi'] ?></a>
-     </div>
+        </div>
 
      <div class="navbar"><a href="./index.php"><?php echo $lang['home'] ?></a>
             <div class="subnav">
@@ -61,17 +61,13 @@ session_start();
         <div class="navbar"></div><a href="./subscribe.php"><?php echo $lang['subscribe'] ?></a></div>
     </div>
 
-    <div class="backfill">
-        <div class="header">
-        <div class="hblock">
-        <h2 >Barry Ord-Clark</h2>
-        </div>
+
+        <div class="headline_low">
+            <h2 >Barry Ord-Clark</h2>
         </div>
         <div class="Barry">
-        <p><?php echo $lang['Barry'] ?>
-        </p>
+            <?php echo $lang['Barry'] ?>
         </div>
-    </div><!-- close backfill -->
 </div><!-- close vlog -->
 </body>
 </html>

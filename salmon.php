@@ -64,25 +64,24 @@ session_start();
     </div>
 
 
-    <div class="backfill">
-        <div class="header">
-        <div class="hblock">
-        <h2><?php echo $lang['Salmon_headline']?></h2>
-        </div></div>
-        <div class="text_salmon"><?php echo$lang['ftfs_salmon'] ?></div>
+        <div class="headline_low">
+            <h2><?php echo $lang['Salmon_headline']?></h2>
+        </div>
+        <div class="text_salmon">
+            <?php echo$lang['ftfs_salmon'] ?>
+        </div>
     
         <div class="tile_10">
-        <a href="./vl_green_machine.php" target="_self">...more</a>
+            <a href="./vl_green_machine.php" target="_self">...more</a>
         </div>
     
         <div class="tile_11">
-        <a href="./vl_royal_spey.php" target="_self">...more</a>
+            <a href="./vl_royal_spey.php" target="_self">...more</a>
         </div>
     
         <div class="tile_12">
-        <a href="./vl_allys_shrimp_tube.php" target="_self">...more</a>
+            <a href="./vl_allys_shrimp_tube.php" target="_self">...more</a>
         </div>
-    </div><!-- close div backfill -->
-</div>
+</div><!-- close div vlog -->
 </body>
 </html>

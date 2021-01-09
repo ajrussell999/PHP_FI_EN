@@ -39,7 +39,7 @@ session_start();
          <!-- <a href="index.php?lang=fi"><?php echo $lang['lang_fi'] ?></a> -->
             <a href="./seatrout.php?lang=fi"  target="_self">
             <img border="2" alt="FI_flag" src="./images/FIflag.png"><?php echo $lang['lang_fi'] ?></a>
-     </div>
+        </div><!-- close div navbar-->
 
      <div class="navbar"><a href="./index.php"><?php echo $lang['home'] ?></a>
             <div class="subnav">
@@ -50,7 +50,7 @@ session_start();
                     <a href="./seatrout.php"><?php echo $lang['sea trout'] ?></a>
                     <a href="./salmon.php"><?php echo $lang['salmon'] ?></a>
                 </div>
-            </div>
+            </div><!-- close div subnav-->
             <div class="subnav">
                 <button class="subnavbutton"><?php echo $lang['about'] ?> <i class="fa fa-caret-down"></i></button>
                 <div class="subnav-content">
@@ -59,29 +59,29 @@ session_start();
                     <a href="./Davie.php">Davie</a>
                 </div>
             </div>
-        <div class="navbar"></div><a href="./subscribe.php"><?php echo $lang['subscribe'] ?></a></div>
-    </div>
+        <div class="navbar"></div><a href="./subscribe.php"><?php echo $lang['subscribe'] ?></a>
+        </div><!-- close div navbar-->
+    </div><!-- close div menu-->
 
-    <div class="backfill">
-        <div class="header">
-        <div class="hblock">
-        <h2><?php echo $lang['Seatrout_headline']?></h2>
-        </div></div>
-        <div class="text_seatrout"><?php echo$lang['ftfs_seatrout'] ?>
+        <div class="headline_low">
+            <h2><?php echo $lang['Seatrout_headline']?></h2>
+        </div>
+
+        <div class="text_seatrout">
+            <?php echo$lang['ftfs_seatrout'] ?>
         </div>
 
         <div class="tile_7">
-        <a href="./vl_proppen.php" target="_self"><?php echo $lang['more'] ?></a>
+            <a href="./vl_proppen.php" target="_self"><?php echo $lang['more'] ?></a>
         </div>
 
         <div class="tile_8">
-        <a href="./vl_silver_doctor.php" target="_self"><?php echo $lang['more'] ?></a>
+            <a href="./vl_silver_doctor.php" target="_self"><?php echo $lang['more'] ?></a>
         </div>
 
         <div class="tile_9">
-        <a href="./vl_sculpin.php" target="_self"><?php echo $lang['more'] ?></a>
+            <a href="./vl_sculpin.php" target="_self"><?php echo $lang['more'] ?></a>
         </div>
-    </div><!-- close div backfill -->
-</div>
+</div><!-- close div vlog -->
 </body>
 </html>

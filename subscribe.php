@@ -76,9 +76,9 @@ function test_input($data) {
          <!-- <a href="index.php?lang=fi"><?php echo $lang['lang_fi'] ?></a> -->
             <a href="./subscribe_FI.php?lang=fi"  target="_self">
             <img border="2" alt="FI_flag" src="./images/FIflag.png"><?php echo $lang['lang_fi'] ?></a>
-     </div>
+        </div><!-- close div navbar-->
 
-     <div class="navbar"><a href="./index.php"><?php echo $lang['home'] ?></a>
+      <div class="navbar"><a href="./index.php"><?php echo $lang['home'] ?></a>
             <div class="subnav">
                 <button class="subnavbutton"><?php echo $lang['fish'] ?><i class="fa fa-caret-down"></i></button>
                 <div class="subnav-content">
@@ -87,7 +87,7 @@ function test_input($data) {
                     <a href="./seatrout.php"><?php echo $lang['sea trout'] ?></a>
                     <a href="./salmon.php"><?php echo $lang['salmon'] ?></a>
                 </div>
-            </div>
+            </div><!-- close div subnav-->
             <div class="subnav">
                 <button class="subnavbutton"><?php echo $lang['about'] ?> <i class="fa fa-caret-down"></i></button>
                 <div class="subnav-content">
@@ -95,45 +95,44 @@ function test_input($data) {
                     <a href="./Barry.php">Barry</a>
                     <a href="./Davie.php">Davie</a>
                 </div>
-            </div>
-        <div class="navbar"></div><a href="./subscribe.php"><?php echo $lang['subscribe'] ?></a></div>
-    </div>
+            </div><!-- close div subnav-->
+        <div class="navbar"></div><a href="./subscribe.php"><?php echo $lang['subscribe'] ?></a>
+      </div><!-- close div navbar-->
+    </div><!-- close div menu -->
 
-    <div class="backfill">
-        <div class="header">
-        <div class="hblock">
+      <div class="headline_low"
         <h2><?php echo $lang['subscr_title'] ?></h2> 
-        </div></div>
-    <p> <?php echo $lang['subscr_text'] ?></p>
+      </div><!-- close div headline_low-->
+        <p> <?php echo $lang['subscr_text'] ?></p>
 
-<p><span class="error">* required field</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <p><span class="error">* required field</span></p>
+
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     Name: <input type="text" name="name" value="<?php echo  $name;?>">
-    <span class="error">* <?php echo $nameErr;?></span>
-    <br><br>
+      <span class="error">* <?php echo $nameErr;?></span>
+      <br><br>
     E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-    <span class="error">* <?php echo $emailErr;?></span>
-    <br><br>
+      <span class="error">* <?php echo $emailErr;?></span>
+      <br><br>
     Gender:
-    <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?>
+      <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?>
         value="female">Female
-    <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-    <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?>
+      <input type="radio" name="gender" <?php if (isset($gender) &&   $gender=="male") echo "checked";?> value="male">Male
+      <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?>
         value="other">Other
-    <span class="error">* <?php echo $genderErr;?></span>
-    <br><br>
-    <input type="submit" name="submit" value="Submit">
-</form>
+      <span class="error">* <?php echo $genderErr;?></span>
+      <br><br>
+      <input type="submit" name="submit" value="Submit">
+    </form>
 
-<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $gender;
-?>
-    </div><!-- close div backfill -->
+      <?php
+      echo "<h2>Your Input:</h2>";
+      echo $name;
+      echo "<br>";
+      echo $email;
+      echo "<br>";
+      echo $gender;
+    ?>
 </div><!-- close vlog -->
 </body>
 </html>

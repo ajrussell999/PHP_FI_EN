@@ -17,13 +17,17 @@
     --powder_blue:rgba(150,179,210,1);
 }
 
+.body{
+    margin: 0px;
+}
 .vlog{
     background-color: var(--powder_blue);
     color:#444;
     font-family:'roboto', sans-serif;
     text-emphasis: none;
     font-weight: normal;
-    z-index: 1;
+    margin: 0px;
+    min-width: 480px;
     }
 
 .menu{
@@ -124,38 +128,24 @@ h2  {
 h3{
     text-align: center;
 }
-.header{
-    /*grid-template-columns: (auto-fit (480,1fr)); /* required for mobile to render header classic blue background in full screen width*/
-    grid-template-columns: 6;
-
-
-    text-align: center;
-    height: auto;
-    width: 100vw;
-    max-width: 100vw; 
-    display: inline-block;
-    box-sizing: border-box;
-    background-color: var(--classic_blue);
-    z-index: 10;
-}
 
 .headline{
     color:var(--white);
     font-family:'Robotoslab', sans-serif;
     font-weight: 400;
-    font-size:4vw;
+    font-size:3vw;
     text-align: left;
-    margin-left: 30pw;
+    /*margin-left: 30pw;*/
     background-color: var(--classic_blue);
 }
 .headlinetwo{
     color:var(--white);
     font-family:'Robotoslab', sans-serif;
     font-weight: 400;
-    font-size:4vw;
+    font-size:3vw;
     text-align: center;
     background-color: var(--classic_blue);
-       }
+}
 .headline_low{
     color:var(--white);
     font-family:'Robotoslab', sans-serif;
@@ -165,49 +155,83 @@ h3{
     background-color: var(--classic_blue);
 }
 
-.TTspace{
-    display:inline-block;
-    width: 100vw;
-    height: 22vh; /* space between navbar and dynamic titles rectangle*/
-    background-color: var(--classic_blue);
-}
-.rectangle {
-    display: inline-block;
-    border: 2vw solid white; /*white rectangle header feature on landing page */
+.head_i1{grid-area:T_Top;}
+.head_i2{grid-area:L_Marg_Rect;}
+.head_i3{grid-area:Rectangle;}
+.head_i4{grid-area:R_Marg_Rect;}
+.head_i5{grid-area:T_Low;}
+
+.header{
+    /* grid design developed to control header areas for mobile devices to render header in classic blue background across full screen width. Else, Right rectangle margin is omitted */
+    display:inline-grid;
+    grid-template-columns: 25vw 50vw 25vw ;/*left and right margins 25vw, center reactangle design with headlines 50vw  */
+    grid-template-rows: 10vw 30vw 20vw ;/*10vw on the top row. 20vw bottom row, 30vw for middle row to dislay rectangle and headlines */
+    grid-template-areas: 
+    'T_Top T_Top T_Top '
+    'L_Marg_Rect Rectangle R_Marg_Rect'
+    'T_Low T_Low T_Low';
+    grid-gap: 0px;
     text-align: center;
-    text-size-adjust: auto;
-    font-size: 3vw;
-    padding: 3vw;
+    width: 100vw; /* grow / shrink with video tiles*/
+    min-width: 480px;
+    background-color: var(--classic_blue);
+
+}
+
+.head_i1{
+    display: grid;/*top row defines padding above the white rectangle */
+    box-sizing: border-box;
+    height:2vw;
+    width: 100vw;
+}
+.head_i2{
+    display: grid;/*left middle row margin  25vw wide (column), 30vw deep (row)*/
+    box-sizing: border-box;
+}
+.head_i3 {
+    display: grid; /*middle row margin 25vw */
+    box-sizing: border-box; /* rectangle relative dimensions*/
     width: 50vw;
     height: 31vw;/*white rectangle maintain width to hight golden ratio */
+    border: 2vw solid white; /*white rectangle header feature on landing page */
+    text-align: center;
+    text-size-adjust: auto; /* text size grows with window size*/
+    font-size: 3vw;
+    padding: 2vw;
     border-radius: 7px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: var(--classic_blue);
+}
+.head_i4{
+    display: grid;
+    box-sizing: border-box;
+    /*middle row right side margin 25vw wide (column). required for mobile else header stops after right side of rectangle (head_i3)*/
+
+}
+.head_i5{
+    display: grid; /* area below white rectangle for lower species titles */
+    text-align: center ;
+    box-sizing: border-box;
 }
 .posts{
         max-width: 100vw; /*tile width of browser with 500px wide posts -inlineblock  */
         grid-template-columns: 1/-1;
-        grid-template-rows: 3;
+        grid-template-rows: 3(autofit, minmax(270,1fr));
         grid-template-columns: repeat(auto-fit, minmax(480,1fr));
         box-sizing: border-box;
         padding: 10px;
-        width: 500px;
-        max-width: 550px;  
+        width: 480px;
+        max-width: 480px;
         height: auto;
         max-height:560px; /* sum of pic, text, tags */
         display: inline-block;
         background-color: var(--powder_blue);
-        vertical-align: top;
-    }
+}
 
     [class^="tile"] {
     box-sizing: border-box;
     padding: 8px;
     max-width: 480px;
-    height: 270px;
-    max-height:270px;
-    vertical-align: top;
+    height:270px;
+    max-height: 270;
     }
         [class^="text_"]{
         grid-column: 1/-1;
@@ -293,6 +317,8 @@ h3{
     max-width: 480px;
     height: auto;
     padding: 8px;
+    /*border: 8px;*/
+    margin: 0px;
     text-align: left;
     text-emphasis: none;   
 }

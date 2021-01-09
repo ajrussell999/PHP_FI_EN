@@ -95,46 +95,44 @@ function test_input($data) {
                     <a href="./Barry.php">Barry</a>
                     <a href="./Davie.php">Davie</a>
                 </div>
-            </div>
+            </div><!-- close div subnav-->
         <div class="navbar"></div><a href="./subscribe.php"><?php echo $lang['subscribe'] ?></a></div>
-    </div>
+    </div><!-- close div menu -->
 
-      <div class="backfill">
-        <div class="header">
-        <div class="hblock">
+      <div class="headline_low">
         <h2><?php echo $lang['subscr_title'] ?></h2>
-        </div></div>
-        <p> <?php echo $lang['subscr_text'] ?></p>
+      </div>
+          <p> <?php echo $lang['subscr_text'] ?></p>
 
 
-<p><span class="error">* Vaadittu kenttä</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-    Nimi: <input type="text" name="name" value="<?php echo  $name;?>">
-    <span class="error">* <?php echo $nameErr;?></span>
-    <br><br>
-    E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-    <span class="error">* <?php echo $emailErr;?></span>
-    <br><br>
-    Sukupuoli:
-    <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Nainen") echo "checked";?>
+          <p><span class="error">* Vaadittu kenttä</span></p>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER      ["PHP_SELF"]);?>">
+      Nimi: <input type="text" name="name" value="<?php echo  $name;?>">
+      <span class="error">* <?php echo $nameErr;?></span>
+      <br><br>
+      E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+      <span class="error">* <?php echo $emailErr;?></span>
+      <br><br>
+      Sukupuoli:
+      <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Nainen") echo "checked";?>
         value="nainen">nainen
-    <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Mies") echo "checked";?> value="mies">mies
-    <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Muu") echo "checked";?>
+      <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Mies") echo "checked";?> value="mies">mies
+      <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Muu") echo "checked";?>
         value="muu">muu
-    <span class="error">* <?php echo $genderErr;?></span>
-    <br><br>
-    <input type="submit" name="submit" value="Lähetä">
-</form>
+      <span class="error">* <?php echo $genderErr;?></span>
+      <br><br>
+      <input type="submit" name="submit" value="Lähetä">
+    </form>
 
-<?php
-echo "<h2>Sinun Panoksesi:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $gender;
-?>
-    </div><!-- close div backfill -->
+    <?php
+    echo "<h2>Sinun Panoksesi:</h2>";
+    echo $name;
+    echo "<br>";
+    echo $email;
+    echo "<br>";
+    echo $gender;
+    ?>
+
 </div><!-- close vlog -->
 </body>
 </html>
